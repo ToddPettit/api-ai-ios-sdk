@@ -65,7 +65,7 @@
         
         NSError *error = nil;
         
-        self.boundary = [self creteBoundary];
+        self.boundary = [self createBoundary];
         
         NSURL *baseURL = manager.baseURL;
         
@@ -171,7 +171,7 @@
     self.recordDetector.VADListening = useVADForAutoCommit;
 }
 
-- (NSString *)creteBoundary
+- (NSString *)createBoundary
 {
     return [NSString stringWithFormat:@"Boundary+%08X%08X", arc4random(), arc4random()];;
 }
